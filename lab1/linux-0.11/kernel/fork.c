@@ -140,7 +140,6 @@ int copy_process(int nr,long ebp,long edi,long esi,long gs,long none,
 int find_empty_process(void)
 {
 	int i;
-
 	repeat:
 		if ((++last_pid)<0) last_pid=1;
 		for(i=0 ; i<NR_TASKS ; i++)

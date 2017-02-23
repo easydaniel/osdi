@@ -137,7 +137,6 @@ void main(void)		/* This really IS void, no error here. */
 	hd_init();
 	floppy_init();
 	sti();
-	panic(""); 
 	move_to_user_mode();
 	if (!fork()) {		/* we count on this going ok */
 		init();
@@ -202,6 +201,9 @@ void init(void)
 			(void) dup(0);
 			(void) dup(0);
 			_exit(execve("/bin/sh",argv,envp));
+		} else {
+			/* Parent process */		
+			printf("Hello 0316222\n\r");
 		}
 		while (1)
 			if (pid == wait(&i))

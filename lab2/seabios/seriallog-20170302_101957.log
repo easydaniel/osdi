@@ -1,0 +1,535 @@
+
+
+======= Thu Mar  2 10:20:07 2017 (adjust=0.0us)
+00.000: SeaBIOS (version ?-20170302_100311-ubuntu)
+00.000: BUILD: gcc: (Ubuntu 5.4.0-6ubuntu1~16.04.4) 5.4.0 20160609 binutils: (GNU Binutils for Ubuntu) 2.26.1
+00.000: No Xen hypervisor found.
+00.007: Running on QEMU (i440fx)
+00.007: RamSize: 0x01000000 [cmos]
+00.008: Relocating init from 0x000d9ec0 to 0x00faca40 (size 79136)
+00.008: Found QEMU fw_cfg
+00.009: QEMU fw_cfg DMA interface supported
+00.009: RamBlock: addr 0x0000000000000000 len 0x0000000001000000 [e820]
+00.009: Moving pm_base to 0x600
+00.010: === PCI bus & bridge init ===
+00.010: PCI: pci_bios_init_bus_rec bus = 0x0
+00.010: === PCI device probing ===
+00.010: Found 6 PCI devices (max PCI bus is 00)
+00.010: === PCI new allocation pass #1 ===
+00.010: PCI: check devices
+00.011: === PCI new allocation pass #2 ===
+00.011: PCI: IO: c000 - c04f
+00.011: PCI: 32: 0000000080000000 - 00000000fec00000
+00.011: PCI: map device bdf=00:03.0  bar 1, addr 0000c000, size 00000040 [io]
+00.011: PCI: map device bdf=00:01.1  bar 4, addr 0000c040, size 00000010 [io]
+00.011: PCI: map device bdf=00:03.0  bar 6, addr feb80000, size 00040000 [mem]
+00.011: PCI: map device bdf=00:03.0  bar 0, addr febc0000, size 00020000 [mem]
+00.011: PCI: map device bdf=00:02.0  bar 6, addr febe0000, size 00010000 [mem]
+00.011: PCI: map device bdf=00:02.0  bar 2, addr febf0000, size 00001000 [mem]
+00.011: PCI: map device bdf=00:02.0  bar 0, addr fd000000, size 01000000 [prefmem]
+00.011: PCI: init bdf=00:00.0 id=8086:1237
+00.011: PCI: init bdf=00:01.0 id=8086:7000
+00.012: PIIX3/PIIX4 init: elcr=00 0c
+00.012: PCI: init bdf=00:01.1 id=8086:7010
+00.012: PCI: init bdf=00:01.3 id=8086:7113
+00.012: Using pmtimer, ioport 0x608
+00.012: PCI: init bdf=00:02.0 id=1234:1111
+00.013: PCI: init bdf=00:03.0 id=8086:100e
+00.013: PCI: Using 00:02.0 for primary VGA
+00.015: Found 1 cpu(s) max supported 1 cpu(s)
+00.016: Copying PIR from 0x00fbfc80 to 0x000f6b40
+00.016: Copying MPTABLE from 0x00006e8c/fa3a50 to 0x000f6a60
+00.016: Copying SMBIOS entry point from 0x00006e8c to 0x000f68b0
+00.018: Scan for VGA option rom
+00.023: Running option rom at c000:0003
+00.023: Start SeaVGABIOS (version rel-1.10.1-0-g8891697-prebuilt.qemu-project.org)
+00.023: VGABUILD: gcc: (GCC) 4.8.5 20150623 (Red Hat 4.8.5-11) binutils: version 2.25.1-22.base.el7 
+00.023: enter vga_post:
+00.023:    a=00000010  b=0000ffff  c=00000000  d=0000ffff ds=0000 es=f000 ss=0000
+00.023:   si=00000000 di=00006f20 bp=00000000 sp=00006dca cs=f000 ip=d375  f=0000
+00.023: VBE DISPI: bdf 00:02.0, bar 0
+00.023: VBE DISPI: lfb_addr=fd000000, size 16 MB
+00.024: Attempting to allocate VGA stack via pmm call to f000:d411
+00.025: pmm call arg1=0
+00.025: VGA stack allocated at ec940
+00.025: Turning on vga text mode console
+00.026: set VGA mode 3
+00.028: THIS IS OSDI LAB2!!!
+00.029: SeaBIOS (version ?-20170302_100311-ubuntu)
+00.032: Searching bootorder for: /pci@i0cf8/isa@1/fdc@03f0/floppy@0
+00.032: ATA controller 1 at 1f0/3f4/0 (irq 14 dev 9)
+00.032: ATA controller 2 at 170/374/0 (irq 15 dev 9)
+00.033: Found 1 lpt ports
+00.033: Found 1 serial ports
+00.033: PS2 keyboard initialized
+00.035: ata0-0: QEMU HARDDISK ATA-7 Hard-Disk (40 MiBytes)
+00.035: Searching bootorder for: /pci@i0cf8/*@1,1/drive@0/disk@0
+00.035: DVD/CD [ata1-0: QEMU DVD-ROM ATAPI-4 DVD/CD]
+00.035: Searching bootorder for: /pci@i0cf8/*@1,1/drive@1/disk@0
+00.035: All threads complete.
+00.035: Scan for option roms
+00.036: Running option rom at c980:0003
+00.037: pmm call arg1=1
+00.038: pmm call arg1=0
+00.039: pmm call arg1=1
+00.039: pmm call arg1=0
+00.041: Searching bootorder for: /pci@i0cf8/*@3
+00.041: Searching bootorder for: /rom@genroms/kvmvapic.bin
+00.041: Searching bootorder for: HALT
+00.041: drive 0x000f67e0: PCHS=134/16/38 translation=none LCHS=134/16/38 s=81920
+00.041: Running option rom at ca80:0003
+00.042: Space available for UMB: cd000-ec000, f63c0-f6780
+00.043: Returned 131072 bytes of ZoneHigh
+00.043: e820 map has 6 items:
+00.043:   0: 0000000000000000 - 000000000009fc00 = 1 RAM
+00.043:   1: 000000000009fc00 - 00000000000a0000 = 2 RESERVED
+00.043:   2: 00000000000f0000 - 0000000000100000 = 2 RESERVED
+00.043:   3: 0000000000100000 - 0000000000fe0000 = 1 RAM
+00.043:   4: 0000000000fe0000 - 0000000001000000 = 2 RESERVED
+00.043:   5: 00000000fffc0000 - 0000000100000000 = 2 RESERVED
+00.046: enter handle_19:
+00.046:   NULL
+00.046: Booting from Floppy...
+00.069: Booting from 0000:7c00
+
+
+======= Thu Mar  2 10:22:51 2017 (adjust=0.0us)
+00.000: SeaBIOS (version ?-20170302_102247-ubuntu)
+00.000: BUILD: gcc: (Ubuntu 5.4.0-6ubuntu1~16.04.4) 5.4.0 20160609 binutils: (GNU Binutils for Ubuntu) 2.26.1
+00.000: No Xen hypervisor found.
+00.007: Running on QEMU (i440fx)
+00.008: RamSize: 0x01000000 [cmos]
+00.008: Relocating init from 0x000d9e80 to 0x00faca20 (size 79168)
+00.009: Found QEMU fw_cfg
+00.009: QEMU fw_cfg DMA interface supported
+00.009: QEMO Config
+00.009: QEMO Start
+00.010: RamBlock: addr 0x0000000000000000 len 0x0000000001000000 [e820]
+00.010: Moving pm_base to 0x600
+00.011: === PCI bus & bridge init ===
+00.011: PCI: pci_bios_init_bus_rec bus = 0x0
+00.011: === PCI device probing ===
+00.011: Found 6 PCI devices (max PCI bus is 00)
+00.012: === PCI new allocation pass #1 ===
+00.012: PCI: check devices
+00.012: === PCI new allocation pass #2 ===
+00.012: PCI: IO: c000 - c04f
+00.012: PCI: 32: 0000000080000000 - 00000000fec00000
+00.012: PCI: map device bdf=00:03.0  bar 1, addr 0000c000, size 00000040 [io]
+00.013: PCI: map device bdf=00:01.1  bar 4, addr 0000c040, size 00000010 [io]
+00.013: PCI: map device bdf=00:03.0  bar 6, addr feb80000, size 00040000 [mem]
+00.013: PCI: map device bdf=00:03.0  bar 0, addr febc0000, size 00020000 [mem]
+00.013: PCI: map device bdf=00:02.0  bar 6, addr febe0000, size 00010000 [mem]
+00.013: PCI: map device bdf=00:02.0  bar 2, addr febf0000, size 00001000 [mem]
+00.013: PCI: map device bdf=00:02.0  bar 0, addr fd000000, size 01000000 [prefmem]
+00.013: PCI: init bdf=00:00.0 id=8086:1237
+00.013: PCI: init bdf=00:01.0 id=8086:7000
+00.013: PIIX3/PIIX4 init: elcr=00 0c
+00.013: PCI: init bdf=00:01.1 id=8086:7010
+00.013: PCI: init bdf=00:01.3 id=8086:7113
+00.014: Using pmtimer, ioport 0x608
+00.014: PCI: init bdf=00:02.0 id=1234:1111
+00.014: PCI: init bdf=00:03.0 id=8086:100e
+00.015: PCI: Using 00:02.0 for primary VGA
+00.016: Found 1 cpu(s) max supported 1 cpu(s)
+00.016: Copying PIR from 0x00fbfc80 to 0x000f6b40
+00.017: Copying MPTABLE from 0x00006e8c/fa3a30 to 0x000f6a60
+00.017: Copying SMBIOS entry point from 0x00006e8c to 0x000f68b0
+00.019: Scan for VGA option rom
+00.023: Running option rom at c000:0003
+00.023: Start SeaVGABIOS (version rel-1.10.1-0-g8891697-prebuilt.qemu-project.org)
+00.023: VGABUILD: gcc: (GCC) 4.8.5 20150623 (Red Hat 4.8.5-11) binutils: version 2.25.1-22.base.el7 
+00.023: enter vga_post:
+00.023:    a=00000010  b=0000ffff  c=00000000  d=0000ffff ds=0000 es=f000 ss=0000
+00.024:   si=00000000 di=00006f20 bp=00000000 sp=00006dca cs=f000 ip=d375  f=0000
+00.024: VBE DISPI: bdf 00:02.0, bar 0
+00.024: VBE DISPI: lfb_addr=fd000000, size 16 MB
+00.025: Attempting to allocate VGA stack via pmm call to f000:d411
+00.025: pmm call arg1=0
+00.025: VGA stack allocated at ec920
+00.026: Turning on vga text mode console
+00.026: set VGA mode 3
+00.030: THIS IS OSDI LAB2!!!
+00.030: SeaBIOS (version ?-20170302_102247-ubuntu)
+00.032: Searching bootorder for: /pci@i0cf8/isa@1/fdc@03f0/floppy@0
+00.032: ATA controller 1 at 1f0/3f4/0 (irq 14 dev 9)
+00.033: ATA controller 2 at 170/374/0 (irq 15 dev 9)
+00.033: Found 1 lpt ports
+00.033: Found 1 serial ports
+00.034: PS2 keyboard initialized
+00.036: ata0-0: QEMU HARDDISK ATA-7 Hard-Disk (40 MiBytes)
+00.036: Searching bootorder for: /pci@i0cf8/*@1,1/drive@0/disk@0
+00.036: DVD/CD [ata1-0: QEMU DVD-ROM ATAPI-4 DVD/CD]
+00.036: Searching bootorder for: /pci@i0cf8/*@1,1/drive@1/disk@0
+00.037: All threads complete.
+00.037: Scan for option roms
+00.038: Running option rom at c980:0003
+00.039: pmm call arg1=1
+00.039: pmm call arg1=0
+00.040: pmm call arg1=1
+00.041: pmm call arg1=0
+00.042: Searching bootorder for: /pci@i0cf8/*@3
+00.043: Searching bootorder for: /rom@genroms/kvmvapic.bin
+00.043: Searching bootorder for: HALT
+00.043: drive 0x000f67e0: PCHS=134/16/38 translation=none LCHS=134/16/38 s=81920
+00.043: Running option rom at ca80:0003
+00.044: Space available for UMB: cd000-ec000, f63c0-f6780
+00.044: Returned 131072 bytes of ZoneHigh
+00.044: e820 map has 6 items:
+00.044:   0: 0000000000000000 - 000000000009fc00 = 1 RAM
+00.044:   1: 000000000009fc00 - 00000000000a0000 = 2 RESERVED
+00.044:   2: 00000000000f0000 - 0000000000100000 = 2 RESERVED
+00.044:   3: 0000000000100000 - 0000000000fe0000 = 1 RAM
+00.044:   4: 0000000000fe0000 - 0000000001000000 = 2 RESERVED
+00.045:   5: 00000000fffc0000 - 0000000100000000 = 2 RESERVED
+00.047: enter handle_19:
+00.047:   NULL
+00.048: Booting from Floppy...
+00.071: Booting from 0000:7c00
+
+
+======= Thu Mar  2 10:24:14 2017 (adjust=0.0us)
+00.000: SeaBIOS (version ?-20170302_102403-ubuntu)
+00.000: BUILD: gcc: (Ubuntu 5.4.0-6ubuntu1~16.04.4) 5.4.0 20160609 binutils: (GNU Binutils for Ubuntu) 2.26.1
+00.000: No Xen hypervisor found.
+00.000: enabling shadow ram
+00.007: Running on QEMU (i440fx)
+00.007: RamSize: 0x01000000 [cmos]
+00.008: malloc preinit
+00.008: Relocating init from 0x000d7ce0 to 0x00fac280 (size 81120)
+00.009: malloc init
+00.009: Found QEMU fw_cfg
+00.009: QEMU fw_cfg DMA interface supported
+00.009: QEMO Config
+00.009: QEMO Start
+00.010: Add romfile: etc/show-boot-menu (size=2)
+00.010: Add romfile: etc/irq0-override (size=1)
+00.010: Add romfile: etc/max-cpus (size=2)
+00.010: Add romfile: etc/numa-cpu-map (size=8)
+00.010: Add romfile: etc/numa-nodes (size=0)
+00.010: Add romfile: bootorder (size=0)
+00.010: Add romfile: etc/acpi/rsdp (size=36)
+00.010: Add romfile: etc/acpi/tables (size=131072)
+00.010: Add romfile: etc/boot-fail-wait (size=4)
+00.010: Add romfile: etc/e820 (size=20)
+00.010: Add romfile: etc/smbios/smbios-anchor (size=31)
+00.010: Add romfile: etc/smbios/smbios-tables (size=320)
+00.010: Add romfile: etc/system-states (size=6)
+00.010: Add romfile: etc/table-loader (size=4096)
+00.010: Add romfile: etc/tpm/log (size=0)
+00.010: Add romfile: genroms/kvmvapic.bin (size=9216)
+00.010: RamBlock: addr 0x0000000000000000 len 0x0000000001000000 [e820]
+00.011: Moving pm_base to 0x600
+00.011: init ivt
+00.011: init bda
+00.011: init bios32
+00.011: init PMM
+00.011: init PNPBIOS table
+00.011: init keyboard
+00.011: init mouse
+00.011: init pic
+00.011: math cp init
+00.011: pci setup
+00.011: === PCI bus & bridge init ===
+00.011: PCI: pci_bios_init_bus_rec bus = 0x0
+00.011: === PCI device probing ===
+00.011: PCI probe
+00.012: Found 6 PCI devices (max PCI bus is 00)
+00.012: === PCI new allocation pass #1 ===
+00.012: PCI: check devices
+00.012: === PCI new allocation pass #2 ===
+00.012: PCI: IO: c000 - c04f
+00.012: PCI: 32: 0000000080000000 - 00000000fec00000
+00.012: PCI: map device bdf=00:03.0  bar 1, addr 0000c000, size 00000040 [io]
+00.012: PCI: map device bdf=00:01.1  bar 4, addr 0000c040, size 00000010 [io]
+00.012: PCI: map device bdf=00:03.0  bar 6, addr feb80000, size 00040000 [mem]
+00.013: PCI: map device bdf=00:03.0  bar 0, addr febc0000, size 00020000 [mem]
+00.013: PCI: map device bdf=00:02.0  bar 6, addr febe0000, size 00010000 [mem]
+00.013: PCI: map device bdf=00:02.0  bar 2, addr febf0000, size 00001000 [mem]
+00.013: PCI: map device bdf=00:02.0  bar 0, addr fd000000, size 01000000 [prefmem]
+00.013: PCI: init bdf=00:00.0 id=8086:1237
+00.013: PCI: init bdf=00:01.0 id=8086:7000
+00.013: PIIX3/PIIX4 init: elcr=00 0c
+00.013: PCI: init bdf=00:01.1 id=8086:7010
+00.013: PCI: init bdf=00:01.3 id=8086:7113
+00.013: Using pmtimer, ioport 0x608
+00.013: PCI: init bdf=00:02.0 id=1234:1111
+00.014: PCI: init bdf=00:03.0 id=8086:100e
+00.014: PCI: Using 00:02.0 for primary VGA
+00.015: init smm
+00.016: Found 1 cpu(s) max supported 1 cpu(s)
+00.016: init PIR table
+00.016: Copying PIR from 0x00fbfc80 to 0x000f5ee0
+00.016: init MPTable
+00.016: Copying MPTABLE from 0x00006e70/fa3290 to 0x000f5e00
+00.017: Copying SMBIOS entry point from 0x00006e70 to 0x000f5c50
+00.017: load ACPI tables
+00.019: init timer
+00.019: Scan for VGA option rom
+00.022: Running option rom at c000:0003
+00.022: Start SeaVGABIOS (version rel-1.10.1-0-g8891697-prebuilt.qemu-project.org)
+00.022: VGABUILD: gcc: (GCC) 4.8.5 20150623 (Red Hat 4.8.5-11) binutils: version 2.25.1-22.base.el7 
+00.022: enter vga_post:
+00.022:    a=00000010  b=0000ffff  c=00000000  d=0000ffff ds=0000 es=f000 ss=0000
+00.022:   si=00000000 di=000062c0 bp=00000000 sp=00006dca cs=f000 ip=ceac  f=0000
+00.023: VBE DISPI: bdf 00:02.0, bar 0
+00.023: VBE DISPI: lfb_addr=fd000000, size 16 MB
+00.023: Attempting to allocate VGA stack via pmm call to f000:cf5d
+00.024: pmm call arg1=0
+00.024: pmm00: length=20 handle=ffffffff flags=9
+00.024: VGA stack allocated at eaf20
+00.024: Turning on vga text mode console
+00.025: set VGA mode 3
+00.028: THIS IS OSDI LAB2!!!
+00.028: Checking for bootsplash
+00.028: SeaBIOS (version ?-20170302_102403-ubuntu)
+00.031: init usb
+00.031: init ps2port
+00.031: /00fa9000\ Start thread
+00.031: init floppy drives
+00.031: Searching bootorder for: /pci@i0cf8/isa@1/fdc@03f0/floppy@0
+00.031: Registering bootable: Floppy [drive A] (type:1 prio:101 data:f5bf0)
+00.031: init hard drives
+00.032: ATA controller 1 at 1f0/3f4/0 (irq 14 dev 9)
+00.032: /00fa8000\ Start thread
+00.032: ATA controller 2 at 170/374/0 (irq 15 dev 9)
+00.032: /00fa7000\ Start thread
+00.032: init ahci
+00.032: init virtio-blk
+00.032: init virtio-scsi
+00.032: init lsi53c895a
+00.032: init esp
+00.032: init megasas
+00.032: init pvscsi
+00.032: init MPT
+00.032: init nvme
+00.032: init lpt
+00.032: Found 1 lpt ports
+00.032: init serial
+00.032: Found 1 serial ports
+00.033: |00fa9000| PS2 keyboard initialized
+00.033: \00fa9000/ End thread
+00.034: |00fa8000| ata0-0: QEMU HARDDISK ATA-7 Hard-Disk (40 MiBytes)
+00.034: |00fa8000| Searching bootorder for: /pci@i0cf8/*@1,1/drive@0/disk@0
+00.034: |00fa8000| Registering bootable: ata0-0: QEMU HARDDISK ATA-7 Hard-Disk (40 MiBytes) (type:2 prio:9999 data:f5b80)
+00.035: \00fa8000/ End thread
+00.035: |00fa7000| DVD/CD [ata1-0: QEMU DVD-ROM ATAPI-4 DVD/CD]
+00.035: |00fa7000| Searching bootorder for: /pci@i0cf8/*@1,1/drive@1/disk@0
+00.035: |00fa7000| Registering bootable: DVD/CD [ata1-0: QEMU DVD-ROM ATAPI-4 DVD/CD] (type:3 prio:9999 data:f5b50)
+00.035: \00fa7000/ End thread
+00.035: All threads complete.
+00.035: Scan for option roms
+00.036: Running option rom at c980:0003
+00.038: pmm call arg1=1
+00.038: pmm01: handle=18ae1000
+00.039: pmm call arg1=0
+00.039: pmm00: length=1000 handle=18ae1000 flags=2
+00.040: pmm call arg1=1
+00.040: pmm01: handle=18ae200a
+00.041: pmm call arg1=0
+00.041: pmm00: length=a000 handle=18ae200a flags=2
+00.044: Searching bootorder for: /pci@i0cf8/*@3
+00.044: Registering bootable: iPXE (PCI 00:03.0) (type:128 prio:9999 data:c9800382)
+00.044: Searching bootorder for: /rom@genroms/kvmvapic.bin
+00.045: Registering bootable: Legacy option rom (type:129 prio:9999 data:ca800003)
+00.045: Searching bootorder for: HALT
+00.045: Mapping floppy drive 0x000f5bf0
+00.045: Mapping hd drive 0x000f5b80 to 0
+00.045: drive 0x000f5b80: PCHS=134/16/38 translation=none LCHS=134/16/38 s=81920
+00.045: Mapping cd drive 0x000f5b50
+00.045: Running option rom at ca80:0003
+00.046: finalize PMM
+00.046: malloc finalize
+00.046: Space available for UMB: cd000-ea000, f5760-f5b20
+00.046: Returned 131072 bytes of ZoneHigh
+00.046: e820 map has 6 items:
+00.046:   0: 0000000000000000 - 000000000009fc00 = 1 RAM
+00.047:   1: 000000000009fc00 - 00000000000a0000 = 2 RESERVED
+00.047:   2: 00000000000f0000 - 0000000000100000 = 2 RESERVED
+00.047:   3: 0000000000100000 - 0000000000fe0000 = 1 RAM
+00.047:   4: 0000000000fe0000 - 0000000001000000 = 2 RESERVED
+00.047:   5: 00000000fffc0000 - 0000000100000000 = 2 RESERVED
+00.047: locking shadow ram
+00.050: Jump to int19
+00.050: enter handle_19:
+00.050:   NULL
+00.050: Booting from Floppy...
+00.051: Floppy_drive_recal 0
+00.051: Floppy_enable_controller
+00.072: Floppy_media_sense on drive 0 found rate 3
+00.073: Booting from 0000:7c00
+00.083: invalid handle_legacy_disk:729:
+00.083:    a=00001500  b=00000003  c=00000000  d=00000b81 ds=f000 es=9000 ss=dc00
+00.083:   si=0000ff63 di=000000a0 bp=00000144 sp=0000f98e cs=9020 ip=006a  f=0246
+
+
+======= Thu Mar  2 10:25:42 2017 (adjust=0.0us)
+00.000: SeaBIOS (version ?-20170302_102538-ubuntu)
+00.000: BUILD: gcc: (Ubuntu 5.4.0-6ubuntu1~16.04.4) 5.4.0 20160609 binutils: (GNU Binutils for Ubuntu) 2.26.1
+00.000: No Xen hypervisor found.
+00.000: enabling shadow ram
+00.007: Running on QEMU (i440fx)
+00.007: RamSize: 0x01000000 [cmos]
+00.007: malloc preinit
+00.008: Relocating init from 0x000d7d60 to 0x00fac2e0 (size 81024)
+00.008: malloc init
+00.009: Found QEMU fw_cfg
+00.009: QEMU fw_cfg DMA interface supported
+00.009: Add romfile: etc/show-boot-menu (size=2)
+00.009: Add romfile: etc/irq0-override (size=1)
+00.009: Add romfile: etc/max-cpus (size=2)
+00.009: Add romfile: etc/numa-cpu-map (size=8)
+00.009: Add romfile: etc/numa-nodes (size=0)
+00.010: Add romfile: bootorder (size=0)
+00.010: Add romfile: etc/acpi/rsdp (size=36)
+00.010: Add romfile: etc/acpi/tables (size=131072)
+00.010: Add romfile: etc/boot-fail-wait (size=4)
+00.010: Add romfile: etc/e820 (size=20)
+00.010: Add romfile: etc/smbios/smbios-anchor (size=31)
+00.010: Add romfile: etc/smbios/smbios-tables (size=320)
+00.010: Add romfile: etc/system-states (size=6)
+00.010: Add romfile: etc/table-loader (size=4096)
+00.010: Add romfile: etc/tpm/log (size=0)
+00.010: Add romfile: genroms/kvmvapic.bin (size=9216)
+00.010: RamBlock: addr 0x0000000000000000 len 0x0000000001000000 [e820]
+00.010: Moving pm_base to 0x600
+00.010: init ivt
+00.010: init bda
+00.011: init bios32
+00.011: init PMM
+00.011: init PNPBIOS table
+00.011: init keyboard
+00.011: init mouse
+00.011: init pic
+00.011: math cp init
+00.011: pci setup
+00.011: === PCI bus & bridge init ===
+00.011: PCI: pci_bios_init_bus_rec bus = 0x0
+00.011: === PCI device probing ===
+00.011: PCI probe
+00.011: Found 6 PCI devices (max PCI bus is 00)
+00.011: === PCI new allocation pass #1 ===
+00.011: PCI: check devices
+00.012: === PCI new allocation pass #2 ===
+00.012: PCI: IO: c000 - c04f
+00.012: PCI: 32: 0000000080000000 - 00000000fec00000
+00.012: PCI: map device bdf=00:03.0  bar 1, addr 0000c000, size 00000040 [io]
+00.012: PCI: map device bdf=00:01.1  bar 4, addr 0000c040, size 00000010 [io]
+00.012: PCI: map device bdf=00:03.0  bar 6, addr feb80000, size 00040000 [mem]
+00.012: PCI: map device bdf=00:03.0  bar 0, addr febc0000, size 00020000 [mem]
+00.012: PCI: map device bdf=00:02.0  bar 6, addr febe0000, size 00010000 [mem]
+00.012: PCI: map device bdf=00:02.0  bar 2, addr febf0000, size 00001000 [mem]
+00.012: PCI: map device bdf=00:02.0  bar 0, addr fd000000, size 01000000 [prefmem]
+00.012: PCI: init bdf=00:00.0 id=8086:1237
+00.012: PCI: init bdf=00:01.0 id=8086:7000
+00.013: PIIX3/PIIX4 init: elcr=00 0c
+00.013: PCI: init bdf=00:01.1 id=8086:7010
+00.013: PCI: init bdf=00:01.3 id=8086:7113
+00.013: Using pmtimer, ioport 0x608
+00.013: PCI: init bdf=00:02.0 id=1234:1111
+00.013: PCI: init bdf=00:03.0 id=8086:100e
+00.014: PCI: Using 00:02.0 for primary VGA
+00.014: init smm
+00.015: Found 1 cpu(s) max supported 1 cpu(s)
+00.015: init PIR table
+00.016: Copying PIR from 0x00fbfc80 to 0x000f5ee0
+00.016: init MPTable
+00.016: Copying MPTABLE from 0x00006e4c/fa32f0 to 0x000f5e00
+00.016: Copying SMBIOS entry point from 0x00006e4c to 0x000f5c50
+00.017: load ACPI tables
+00.019: init timer
+00.019: Scan for VGA option rom
+00.023: Running option rom at c000:0003
+00.023: Start SeaVGABIOS (version rel-1.10.1-0-g8891697-prebuilt.qemu-project.org)
+00.024: VGABUILD: gcc: (GCC) 4.8.5 20150623 (Red Hat 4.8.5-11) binutils: version 2.25.1-22.base.el7 
+00.024: enter vga_post:
+00.024:    a=00000010  b=0000ffff  c=00000000  d=0000ffff ds=0000 es=f000 ss=0000
+00.024:   si=00000000 di=000062c0 bp=00000000 sp=00006da6 cs=f000 ip=ceac  f=0000
+00.024: VBE DISPI: bdf 00:02.0, bar 0
+00.024: VBE DISPI: lfb_addr=fd000000, size 16 MB
+00.025: Attempting to allocate VGA stack via pmm call to f000:cf5d
+00.026: pmm call arg1=0
+00.026: pmm00: length=20 handle=ffffffff flags=9
+00.026: VGA stack allocated at eaf40
+00.027: Turning on vga text mode console
+00.027: set VGA mode 3
+00.031: THIS IS OSDI LAB2!!!
+00.031: SeaBIOS (version ?-20170302_102538-ubuntu)
+00.033: init usb
+00.033: init ps2port
+00.033: /00fa9000\ Start thread
+00.034: init floppy drives
+00.034: Searching bootorder for: /pci@i0cf8/isa@1/fdc@03f0/floppy@0
+00.034: Registering bootable: Floppy [drive A] (type:1 prio:101 data:f5bf0)
+00.034: init hard drives
+00.034: ATA controller 1 at 1f0/3f4/0 (irq 14 dev 9)
+00.034: /00fa8000\ Start thread
+00.035: ATA controller 2 at 170/374/0 (irq 15 dev 9)
+00.035: /00fa7000\ Start thread
+00.035: init ahci
+00.035: init virtio-blk
+00.035: init virtio-scsi
+00.035: init lsi53c895a
+00.035: init esp
+00.035: init megasas
+00.035: init pvscsi
+00.035: init MPT
+00.035: init nvme
+00.035: init lpt
+00.035: Found 1 lpt ports
+00.035: init serial
+00.035: Found 1 serial ports
+00.035: |00fa9000| PS2 keyboard initialized
+00.035: \00fa9000/ End thread
+00.037: |00fa8000| ata0-0: QEMU HARDDISK ATA-7 Hard-Disk (40 MiBytes)
+00.037: |00fa8000| Searching bootorder for: /pci@i0cf8/*@1,1/drive@0/disk@0
+00.037: |00fa8000| Registering bootable: ata0-0: QEMU HARDDISK ATA-7 Hard-Disk (40 MiBytes) (type:2 prio:9999 data:f5b80)
+00.037: \00fa8000/ End thread
+00.037: |00fa7000| DVD/CD [ata1-0: QEMU DVD-ROM ATAPI-4 DVD/CD]
+00.038: |00fa7000| Searching bootorder for: /pci@i0cf8/*@1,1/drive@1/disk@0
+00.038: |00fa7000| Registering bootable: DVD/CD [ata1-0: QEMU DVD-ROM ATAPI-4 DVD/CD] (type:3 prio:9999 data:f5b50)
+00.038: \00fa7000/ End thread
+00.038: All threads complete.
+00.038: Scan for option roms
+00.039: Running option rom at c980:0003
+00.040: pmm call arg1=1
+00.040: pmm01: handle=18ae1000
+00.041: pmm call arg1=0
+00.041: pmm00: length=1000 handle=18ae1000 flags=2
+00.042: pmm call arg1=1
+00.042: pmm01: handle=18ae200a
+00.042: pmm call arg1=0
+00.042: pmm00: length=a000 handle=18ae200a flags=2
+00.045: Searching bootorder for: /pci@i0cf8/*@3
+00.045: Registering bootable: iPXE (PCI 00:03.0) (type:128 prio:9999 data:c9800382)
+00.045: Searching bootorder for: /rom@genroms/kvmvapic.bin
+00.045: Registering bootable: Legacy option rom (type:129 prio:9999 data:ca800003)
+00.045: Searching bootorder for: HALT
+00.045: Mapping floppy drive 0x000f5bf0
+00.046: Mapping hd drive 0x000f5b80 to 0
+00.046: drive 0x000f5b80: PCHS=134/16/38 translation=none LCHS=134/16/38 s=81920
+00.046: Mapping cd drive 0x000f5b50
+00.046: Running option rom at ca80:0003
+00.047: finalize PMM
+00.047: malloc finalize
+00.047: Space available for UMB: cd000-ea000, f5760-f5b20
+00.047: Returned 131072 bytes of ZoneHigh
+00.047: e820 map has 6 items:
+00.048:   0: 0000000000000000 - 000000000009fc00 = 1 RAM
+00.048:   1: 000000000009fc00 - 00000000000a0000 = 2 RESERVED
+00.048:   2: 00000000000f0000 - 0000000000100000 = 2 RESERVED
+00.048:   3: 0000000000100000 - 0000000000fe0000 = 1 RAM
+00.048:   4: 0000000000fe0000 - 0000000001000000 = 2 RESERVED
+00.048:   5: 00000000fffc0000 - 0000000100000000 = 2 RESERVED
+00.048: locking shadow ram
+00.050: Jump to int19
+00.051: enter handle_19:
+00.051:   NULL
+00.051: Booting from Floppy...
+00.052: Floppy_drive_recal 0
+00.052: Floppy_enable_controller
+00.073: Floppy_media_sense on drive 0 found rate 3
+00.074: Booting from 0000:7c00
+00.085: invalid handle_legacy_disk:729:
+00.085:    a=00001500  b=00000003  c=00000000  d=00000b81 ds=f000 es=9000 ss=dc00
+00.085:   si=0000ff63 di=000000a0 bp=00000144 sp=0000f9ae cs=9020 ip=006a  f=0246

@@ -65,9 +65,18 @@ go:	mov	%cs, %ax
 # load the setup-sectors directly after the bootblock.
 # Note that 'es' is already set up.
 
-load_setup:
+load_hello:
 	mov	$0x0000, %dx		# drive 0, head 0
 	mov	$0x0002, %cx		# sector 2, track 0
+	mov	$0x0200, %bx		# address = 512, in INITSEG
+	.equ    AX, 0x0200+SETUPLEN
+	mov     $AX, %ax		# service 2, nr of sectors
+	int	$0x13			# read it
+	jnc	ok_load_setup		# ok - continue
+
+load_setup:
+	mov	$0x0000, %dx		# drive 0, head 0
+	mov	$0x0003, %cx		# sector 3, track 0
 	mov	$0x0200, %bx		# address = 512, in INITSEG
 	.equ    AX, 0x0200+SETUPLEN
 	mov     $AX, %ax		# service 2, nr of sectors
@@ -147,7 +156,7 @@ root_defined:
 #
 # in:	es - starting address segment (normally 0x1000)
 #
-sread:	.word 1+ SETUPLEN	# sectors read of current track
+sread:	.word 2+ SETUPLEN	# sectors read of current track
 head:	.word 0			# current head
 track:	.word 0			# current track
 

@@ -62,17 +62,45 @@ go:	mov	%cs, %ax
 	mov	%ax, %ss
 	mov	$0xFF00, %sp		# arbitrary value >>512
 
-# load the setup-sectors directly after the bootblock.
-# Note that 'es' is already set up.
+select_load_msg:
+    mov $0x03, %ah      # read cursor pos
+    xor %bh, %bh
+    int $0x10
+     
+    mov $24, %cx
+    mov $0x0007, %bx        # page 0, attribute 7 (normal)
+    mov $option_msg, %bp
+    mov $0x1301, %ax        # write string, move cursor
+    int $0x10
+select_load:
+	mov $0x0000, %ax		# service 0
+	int $0x16				# scan input
+	cmp $0x31, %al			# hello
+	je load_hello
+	cmp $0x32, %al			# setup 
+	je load_setup
+	jmp select_load
 
 load_hello:
 	mov	$0x0000, %dx		# drive 0, head 0
 	mov	$0x0002, %cx		# sector 2, track 0
-	mov	$0x0200, %bx		# address = 512, in INITSEG
-	.equ    AX, 0x0200+SETUPLEN
-	mov     $AX, %ax		# service 2, nr of sectors
-	int	$0x13			# read it
-	jnc	ok_load_setup		# ok - continue
+	mov	$0x0100, %bx		# address = 512, in INITSEG
+	mov %bx, %es			# load to memory loaction es * 16 + bx
+	mov $0x0000, %bx
+	mov $0x0201, %ax		# service 2, nr of sectors
+	int	$0x13				# read it
+	jnc ok_load_hello
+	mov	$0x0000, %dx
+	mov	$0x0000, %ax		# reset the diskette
+	int	$0x13
+	jmp	load_hello
+
+ok_load_hello:
+	.equ sel_cs0, 0x0100
+	ljmp $sel_cs0, $0
+
+# load the setup-sectors directly after the bootblock.
+# Note that 'es' is already set up.
 
 load_setup:
 	mov	$0x0000, %dx		# drive 0, head 0
@@ -80,7 +108,7 @@ load_setup:
 	mov	$0x0200, %bx		# address = 512, in INITSEG
 	.equ    AX, 0x0200+SETUPLEN
 	mov     $AX, %ax		# service 2, nr of sectors
-	int	$0x13			# read it
+	int	$0x13				# read it
 	jnc	ok_load_setup		# ok - continue
 	mov	$0x0000, %dx
 	mov	$0x0000, %ax		# reset the diskette
@@ -258,7 +286,15 @@ msg1:
 	.ascii "Loading system ..."
 	.byte 13,10,13,10
 
+option_msg:
+	.byte 13,10,49,41,32,32
+	.ascii "Hello"
+	.byte 13,10,50,41,32,32
+	.ascii "Setup"
+	.byte 13,10,13,10
+
 	.org 508
+	
 root_dev:
 	.word ROOT_DEV
 boot_flag:
